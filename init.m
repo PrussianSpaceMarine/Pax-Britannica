@@ -23,6 +23,9 @@ markerTypes = readtable("settings/defines/markerTypes.csv");
 % Initial status marker placements
 area_markers = readtable("settings/defines/area_markers.csv");
 
+% Random Events
+events = readtable("settings/defines/events.csv","Delimiter",',','ReadVariableNames',true);
+
 %% Game Loop
 % Sets up initial game state
 
