@@ -25,6 +25,9 @@ area_markers = readtable("settings/defines/area_markers.csv");
 
 % Random Events
 events = readtable("settings/defines/events.csv","Delimiter",',','ReadVariableNames',true);
+% Unrest Tables
+unrest = readtable("settings\defines\unrest.csv","Delimiter",',','ReadVariableNames',true);
+unrest = join(unrest,areas,"Keys","aID");
 
 %% Game Loop
 % Sets up initial game state

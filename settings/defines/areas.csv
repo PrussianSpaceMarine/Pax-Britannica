@@ -1,7 +1,129 @@
-aID,name,tID,ev,cs,validDoSt
-1,Abyssinia,5,4,4,0
-2,Aden,1,3,1,0
-3,Afghanistan,1,2,10,0
-4,Alaska,1,6,1,1
-5,Algiers,1,8,3,0
-6,Anatolia,4,7,20,0
+aID,name,tID,ev,cs,validDoSt,unrest
+1,Abyssinia,5,4,4,0,0
+2,Aden,1,3,1,0,0
+3,Afghanistan,1,2,10,0,0
+4,Alaska,1,6,1,1,0
+5,Algiers,1,8,3,0,0
+6,Anatolia,4,7,20,0,0
+7,Angola,1,5,1,0,0
+8,Argentina,5,7,10,0,0
+9,Ashantee,1,4,1,0,0
+10,Australia,5,8,10,2,0
+11,Baluchistan,1,3,3,0,0
+12,Bechuanaland,1,2,1,0,0
+13,Bengal,1,6,5,0,0
+14,Berbera,1,4,1,0,0
+15,Bismarck Archipelago,1,4,0,0,0
+16,Bolivia,5,3,2,0,0
+17,Brasil,5,9,20,0,0
+18,Bulgaria,5,5,10,0,0
+19,Burma,2,4,3,0,0
+20,Canada,5,9,10,2,0
+21,Cape Colony,5,8,10,2,0
+22,Central America,5,4,5,0,0
+23,Central China,3,8,10,0,0
+24,Chile,5,5,6,0,0
+25,Cochinchina,1,7,3,0,0
+26,Colombia,5,5,7,0,0
+27,Cuba,1,6,3,1,0
+28,Dutch East Indies,1,8,3,0,0
+29,Ecuador,5,3,6,0,0
+30,Egypt,1,8,5,0,0
+31,Eritrea,1,5,2,0,0
+32,Federated Malay States,1,6,2,0,0
+33,Fiji,1,4,0,0,0
+34,Formosa,2,6,1,0,0
+35,Fukien,3,4,5,0,0
+36,Gabon,1,3,1,0,0
+37,Gold Coast,1,4,1,0,0
+38,Greece,5,5,10,0,0
+39,Guiana,5,4,1,0,0
+40,Hawaii,1,5,1,1,0
+41,Hindoostan,1,7,5,0,0
+42,Hong Kong,3,6,1,0,0
+43,Indochina,2,6,3,0,0
+44,Inner Mongolia,3,2,1,0,0
+45,Kaiser Wilhelm's Land,1,3,1,0,0
+46,Kambara,1,3,1,0,0
+47,Kamerun,1,5,1,0,0
+48,Kansu,3,4,3,0,0
+49,Kashmir,1,3,3,0,0
+50,Kenya,1,6,2,0,0
+51,Kongo,1,8,1,0,0
+52,Korea,2,8,3,0,0
+53,Kwang-Si,3,4,5,0,0
+54,Madagascar,1,5,1,0,0
+55,Manchuria,3,8,5,0,0
+56,Marocco,1,5,3,0,0
+57,Mauretania,1,3,1,0,0
+58,Mexico,5,7,20,0,0
+59,Mongolia,3,3,1,0,0
+60,Mozambique,1,5,1,0,0
+61,New Guinea,1,2,1,0,0
+62,New Hebrides,1,4,0,0,0
+63,New Zealand,5,6,5,2,0
+64,Newfoundland,1,1,3,0,0
+65,Nigeria,1,6,3,0,0
+66,Orange River Free State,5,7,5,0,0
+67,Panama,5,4,2,0,0
+68,Papua,1,3,1,0,0
+69,Persia,5,4,3,0,0
+70,Peru,5,5,7,0,0
+71,Philippines,1,6,5,0,0
+72,Port Arthur,3,4,1,0,0
+73,Porto Rico,1,5,2,1,0
+74,Punjab,1,4,3,0,0
+75,Quwait,4,3,2,0,0
+76,Rajputana,1,5,3,0,0
+77,Rhodesia,1,5,1,0,0
+78,Rio de Oro,1,2,1,0,0
+79,Rumania,5,5,10,0,0
+80,Sarawak,1,4,1,0,0
+81,Senegambia,1,5,1,0,0
+82,Serbia,5,5,10,0,0
+83,Shang-Hai,3,4,3,0,0
+84,Shan-Tung,3,4,3,0,0
+85,Siam,5,3,5,0,0
+86,Sin-Kiang,3,2,3,0,0
+87,Sokoto,1,2,1,0,0
+88,Somalia,1,4,1,0,0
+89,Soudan,1,3,2,0,0
+90,Sudwest Afrika,1,3,1,0,0
+91,Szech-Wan,3,4,3,0,0
+92,Tanganyika,1,7,1,0,0
+93,Taureg,1,3,1,0,0
+94,Tchad,1,2,1,0,0
+95,Tibet,3,2,3,0,0
+96,Togoland,1,4,1,0,0
+97,Transvaal,5,7,15,0,0
+98,Tripoli,4,4,2,0,0
+99,Tunis,1,5,3,0,0
+100,Turcomania,1,4,2,0,0
+101,Uganda,1,4,1,0,0
+102,United Provinces,1,6,3,0,0
+103,Venezuela,5,5,7,0,0
+104,Yunnan,3,5,3,0,0
+105,Japan,6,0,0,0,0
+106,United States,6,0,0,0,0
+107,Russia,6,0,0,0,0
+108,Netherlands,6,0,0,0,0
+109,Belgium,6,0,0,0,0
+110,Spain,6,0,0,0,0
+111,Portugal,6,0,0,0,0
+112,Britain,6,0,0,0,0
+113,France,6,0,0,0,0
+114,Germany,6,0,0,0,0
+115,Austria-Hungary,6,0,0,0,0
+116,Italy,6,0,0,0,0
+117,North Atlantic Ocean,7,0,0,0,0
+118,South Atlantic Ocean,7,0,0,0,0
+119,Caribbean Sea,7,0,0,0,0
+120,Mediterranean Sea,7,0,0,0,0
+121,Baltic Sea,7,0,0,0,0
+122,Black Sea,7,0,0,0,0
+123,Indian Ocean,7,0,0,0,0
+124,South Pacific Ocean,7,0,0,0,0
+125,North Pacific Ocean,7,0,0,0,0
+126,Oceania,7,0,0,0,0
+127,North China Sea,7,0,0,0,0
+128,South China Sea,7,0,0,0,0

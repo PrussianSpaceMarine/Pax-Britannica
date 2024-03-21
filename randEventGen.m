@@ -25,8 +25,26 @@ while n < eventCount
         % Assign to randomEvent history matrix
         randomEvents(turn,n) = eID;
         
+        % Unrest rolls
+        unrestr1 = randi(6);
+        unrestr2 = randi(6);
+        if eID >= 31 % Table A
+            unrestPick = unrest(unrest{:,"table"} == 1 & unrest{:,"d1"} == unrestr1 & unrest{:,"d2"} == unrestr2,:);
+        elseif eID >= 26 % Table B
+            unrestPick = unrest(unrest{:,"table"} == 2 & unrest{:,"d1"} == unrestr1 & unrest{:,"d2"} == unrestr2,:);
+        elseif eID >= 22 % Table C
+            unrestPick = unrest(unrest{:,"table"} == 3 & unrest{:,"d1"} == unrestr1 & unrest{:,"d2"} == unrestr2,:);
+        elseif eID >= 20 % Table D
+            unrestPick = unrest(unrest{:,"table"} == 4 & unrest{:,"d1"} == unrestr1 & unrest{:,"d2"} == unrestr2,:);
+        end
+        
         % Print event to console
-        fprintf("%s. **%s**\n   %s\n\n",num2str(n),string(eventPick.event),string(eventPick.desc));
+        if eID >= 20
+            fprintf("%s. **%s**\n   %s is in turmoil.\n\n",num2str(n),string(eventPick.event),string(unrestPick.name));
+            areas{unrestPick.aID,"unrest"} = 1;
+        else
+            fprintf("%s. **%s**\n   %s\n\n",num2str(n),string(eventPick.event),string(eventPick.desc));
+        end
 
     end
 
