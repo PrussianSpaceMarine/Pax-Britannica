@@ -46,6 +46,14 @@ armyBought = zeros(10,playerCount); % Raising armies
 navyUpkeep = zeros(10,playerCount); % Upkeep for navies
 navyBought = zeros(10,playerCount); % Building navies
 
+totalRevenue = zeros(10,playerCount);
+totalExpenditure = zeros(10,playerCount);
+income = zeros(10,playerCount);
+
+% Military
+armies = zeros(10,playerCount);
+navies = zeros(10,playerCount);
+
 % VPs
 vpBonus = zeros(10,playerCount); % Bonus
 vpPenalty = zeros(10,playerCount); % Penalties
