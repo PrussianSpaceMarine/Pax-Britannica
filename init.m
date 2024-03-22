@@ -1,7 +1,7 @@
 % Initializes game state
 clear
 
-noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
+noStop = 1; % 0 == Don't automatically run first turn information, 1 == Run
 
 %% Assign Country Data
 % 1 = Player, 0 = Minor
