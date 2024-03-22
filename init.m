@@ -1,6 +1,8 @@
 % Initializes game state
 clear
 
+noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
+
 %% Assign Country Data
 % 1 = Player, 0 = Minor
 
@@ -77,3 +79,7 @@ vpBought = zeros(10,playerCount); % Purchased
 victoryPoints = zeros(10,playerCount); % Overall VPs
 
 clc
+
+if noStop == 1
+    run1
+end
