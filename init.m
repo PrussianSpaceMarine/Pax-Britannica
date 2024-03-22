@@ -1,4 +1,5 @@
 % Initializes game state
+clear
 
 %% Assign Country Data
 % 1 = Player, 0 = Minor
@@ -74,3 +75,5 @@ vpBonus = zeros(10,playerCount); % Bonus
 vpPenalty = zeros(10,playerCount); % Penalties
 vpBought = zeros(10,playerCount); % Purchased
 victoryPoints = zeros(10,playerCount); % Overall VPs
+
+clc
