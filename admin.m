@@ -6,7 +6,7 @@ playerPowers = powers(powers.player == 1,:); % Reset player power information
 fprintf("# ADMINISTRATION #\n");
 
 for p = 1:length(playerPowers.pID)
-    
+
     pp = playerPowers{p,"pID"};
     empire = area_markers(area_markers{:,"pID"} == pp,:);
     highest = max([empire.mID;0]);
@@ -28,14 +28,27 @@ for p = 1:length(playerPowers.pID)
     
     % Filter status markers to this country
     f = area_markersJ(area_markersJ{:,"pID"} == pp,:);
+    
+    % Filter units to this country
+    u = units(units{:,"pID"} == pp,:);
+    u = join(u,areas,"Keys","aID"); % Combine with area information
+    u = u(u{:,"uType"} < 3 & u{:,"tID"} ~= 6,:); % Filter to units they must actually pay for
+    u = join(u,area_markers(area_markers{:,"pID"} == pp,:),"Keys","aID","KeepOneCopy","pID"); % Combine with marker info
+    u = u(u{:,"mID"} < 5,:); % Exclude dominions/states
+
+    % Army Upkeep
+    armyUpkeep(turn,p) = sum(u{u{:,"uType"} == 1,"sz"});
+
+    % Navy Upkeep
+    navyUpkeep(turn,p) = sum(u{u{:,"uType"} == 2,"sz"});
 
     % Status marker revenue and maintenance
-    statusRevenue(turn,p) = sum(f.ev .* f.mID);
+    statusRevenue(turn,p) = sum(f.ev .* f.evM);
     statusUpkeep(turn,p) = sum(f.maint);
 
     % Final totals
     totalRevenue(turn,p) = statusRevenue(turn,p) + colonialOffice(turn,p);
-    totalExpenditure(turn,p) = statusUpkeep(turn,p);
+    totalExpenditure(turn,p) = statusUpkeep(turn,p) + armyUpkeep(turn,p) + navyUpkeep(turn,p);
 
     totalIncome(turn,p) = totalRevenue(turn,p) - totalExpenditure(turn,p);
 
@@ -48,7 +61,9 @@ for p = 1:length(playerPowers.pID)
     fprintf("- %d£ Foreign Holdings\n",statusRevenue(turn,p));
 
     fprintf("*Expenditure:* %d£\n",-1*totalExpenditure(turn,p));
-    fprintf("- %d£ Foreign Upkeep\n",-1*statusUpkeep(turn,p));
+    fprintf("- %d£ Holdings Upkeep\n",-1*statusUpkeep(turn,p));
+    fprintf("- %d£ Army Supplies\n",-1*armyUpkeep(turn,p));
+    fprintf("- %d£ Naval Supplies\n",-1*navyUpkeep(turn,p));
 
     fprintf("\nTOTAL INCOME: **%d£**\n\n",totalIncome(turn,p));
 

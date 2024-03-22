@@ -1,6 +1,6 @@
 mID,marker,buy,maint,evM,garReq
 1,Interest,5,0,1,0
 2,Influence,10,5,2,0
-3,Protectorate,20,10,3,1
-4,Possession,40,20,4,1
+3,Protectorate,20,10,4,1
+4,Possession,40,20,5,1
 5,Dominion/State,60,30,5,1

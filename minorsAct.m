@@ -76,7 +76,7 @@ while m <= minorCount
 
         if reroll == 0
             % Write to console
-            fprintf("\n%s establishes %s in %s\n",string(minors{m,"n"}),string(markerTypes{did,2}),string(a.name));
+            fprintf("\n%s obtains %s in %s\n",string(minors{m,"n"}),string(markerTypes{did,2}),string(a.name));
             minorActions(turn,m) = colAttempt; % Assign to history
         end
         

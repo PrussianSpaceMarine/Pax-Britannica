@@ -1,7 +1,7 @@
 % Initializes game state
 clear
 
-noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
+noStop = 1; % 0 == Don't automatically run first turn information, 1 == Run
 
 %% Assign Country Data
 % 1 = Player, 0 = Minor
@@ -17,7 +17,7 @@ minors = powers(powers.player == 0 & powers.colonizer == 1,:);
 
 %% Import Initial State
 
-% Import areas and join into one table
+% Import areas
 areaTypes = readtable("settings/defines/areaTypes.csv");
 areas = readtable("settings/defines/areas.csv");
 
@@ -27,6 +27,9 @@ markerTypes = readtable("settings/defines/markerTypes.csv");
 % Initial status marker placements
 area_markers = readtable("settings/defines/area_markers.csv");
 area_markersJ = join(join(area_markers,areas,"Keys","aID"),markerTypes,"Keys","mID");
+
+% Initial Military Units
+units = readtable("settings/defines/units.csv");
 
 % Random Events
 events = readtable("settings/defines/events.csv","Delimiter",',','ReadVariableNames',true);
