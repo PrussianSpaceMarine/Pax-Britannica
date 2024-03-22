@@ -1,15 +1,15 @@
-pID,n,nS,player,colonizer,vp,vpDiv
-1,United Kingdom,gbr,1,1,0,10
-2,France,fra,1,1,0,7
-3,Germany,ger,1,1,0,5
-4,United States,usa,1,1,0,4
-5,Japan,jap,1,1,0,3
-6,Russia,rus,0,1,0,2.5
-7,Italy,ita,0,1,0,2.5
-8,Austria-Hungary,a_h,1,1,0,5
-9,Belgium,bel,0,1,0,1
-10,Netherlands,ned,0,1,0,1
-11,Spain,spa,0,1,0,1
-12,Portugal,por,0,1,0,1
-13,Ottomans,ott,0,0,0,1
-14,China,chi,0,0,0,1
+pID,n,nS,player,colonizer,fundLvl,vpDiv,fundM
+1,United Kingdom,gbr,1,1,4,10,1
+2,France,fra,1,1,4,7,1
+3,Germany,ger,1,1,3,5,1
+4,United States,usa,1,1,3,4,1
+5,Japan,jap,1,1,2,3,1
+6,Russia,rus,0,1,2,2.5,1
+7,Italy,ita,0,1,2,2.5,1
+8,Austria-Hungary,a_h,1,1,2,5,1
+9,Belgium,bel,0,1,1,1,1
+10,Netherlands,ned,0,1,1,1,1
+11,Spain,spa,0,1,1,1,1
+12,Portugal,por,0,1,1,1,1
+13,Ottomans,ott,0,0,1,1,1
+14,China,chi,0,0,1,1,1

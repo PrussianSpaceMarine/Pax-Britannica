@@ -4,7 +4,7 @@
 eventCount = randi(6); % Number of events this turn
 n = 0; % Number of events successfully generated
 
-fprintf("\n# %s Headlines #\n*%s Events*\n\n",num2str(year),num2str(eventCount));
+fprintf("\n# %s Headlines #\n*%s Events*\n\n",num2str(yr),num2str(eventCount));
 
 while n < eventCount
 
@@ -37,6 +37,16 @@ while n < eventCount
         elseif eID >= 20 % Table D
             unrestPick = unrest(unrest{:,"table"} == 4 & unrest{:,"d1"} == unrestr1 & unrest{:,"d2"} == unrestr2,:);
         end
+
+        % Adjust funding multipliers
+        affected = eventPick.pID; % pID of affected country
+        if affected > 0
+            mult = eventPick.fundM; % Funding multiplier
+            powers{affected,"fundM"} = powers{affected,"fundM"} * mult;
+        end
+
+        resentment(turn) = resentment(turn) + eventPick.CR; % Adjust Chinese Resentment
+        tensions(turn) = tensions(turn) + eventPick.ET; % Adjust European Tension
         
         % Print event to console
         if eID >= 20

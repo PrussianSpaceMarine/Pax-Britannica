@@ -22,19 +22,24 @@ markerTypes = readtable("settings/defines/markerTypes.csv");
 
 % Initial status marker placements
 area_markers = readtable("settings/defines/area_markers.csv");
+area_markersJ = join(join(area_markers,areas,"Keys","aID"),markerTypes,"Keys","mID");
 
 % Random Events
 events = readtable("settings/defines/events.csv","Delimiter",',','ReadVariableNames',true);
+
 % Unrest Tables
 unrest = readtable("settings\defines\unrest.csv","Delimiter",',','ReadVariableNames',true);
 unrest = join(unrest,areas,"Keys","aID");
+
+% Colonial Office Funding Ranges
+funding = readtable("settings\defines\funding.csv","Delimiter",',','ReadVariableNames',true);
 
 %% Game Loop
 % Sets up initial game state
 
 turn = 1;
 yearTicker = 1880:4:1916;
-year = yearTicker(turn); % Starting year
+yr = yearTicker(turn); % Starting year
 
 resentment = zeros(10,1); % Initial Chinese Resentment Index
 tensions = zeros(10,1); % Initial European Tensions Index
