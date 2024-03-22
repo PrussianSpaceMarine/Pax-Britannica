@@ -68,5 +68,5 @@ navies = zeros(10,playerCount);
 % VPs
 vpBonus = zeros(10,playerCount); % Bonus
 vpPenalty = zeros(10,playerCount); % Penalties
-bpBought = zeros(10,playerCount); % Purchased
+vpBought = zeros(10,playerCount); % Purchased
 victoryPoints = zeros(10,playerCount); % Overall VPs

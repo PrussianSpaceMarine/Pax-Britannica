@@ -21,4 +21,10 @@ for p = 1:length(playerPowers.pID)
     statusRevenue(turn,p) = sum(f.ev .* f.mID);
     statusUpkeep(turn,p) = sum(f.maint);
 
+    % Final totals
+    totalRevenue(turn,p) = statusRevenue(turn,p) + colonialOffice(turn,p);
+    totalExpenditure(turn,p) = statusUpkeep(turn,p);
+
+    totalIncome(turn,p) = totalRevenue(turn,p) - totalExpenditure(turn,p);
+
 end
