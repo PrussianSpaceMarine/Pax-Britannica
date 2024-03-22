@@ -28,11 +28,11 @@ area_markersJ = join(join(area_markers,areas,"Keys","aID"),markerTypes,"Keys","m
 events = readtable("settings/defines/events.csv","Delimiter",',','ReadVariableNames',true);
 
 % Unrest Tables
-unrest = readtable("settings\defines\unrest.csv","Delimiter",',','ReadVariableNames',true);
+unrest = readtable("settings/defines/unrest.csv","Delimiter",',','ReadVariableNames',true);
 unrest = join(unrest,areas,"Keys","aID");
 
 % Colonial Office Funding Ranges
-funding = readtable("settings\defines\funding.csv","Delimiter",',','ReadVariableNames',true);
+funding = readtable("settings/defines/funding.csv","Delimiter",',','ReadVariableNames',true);
 
 %% Game Loop
 % Sets up initial game state
