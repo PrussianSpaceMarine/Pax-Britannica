@@ -1,10 +1,13 @@
 % Initializes game state
 clear
 
-noStop = 1; % 0 == Don't automatically run first turn information, 1 == Run
+noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
 
 %% Assign Country Data
 % 1 = Player, 0 = Minor
+
+% Globals
+global powers units area_markers areas
 
 powers = readtable("settings/defines/powers.csv");
 
@@ -47,6 +50,9 @@ minorTables = readtable("settings/defines/minorTables.csv","Delimiter",',','Read
 %% Game Loop
 % Sets up initial game state
 
+% Globals
+global turn spendable armyBought navyBought totalExpenditure remaining
+
 turn = 1;
 yearTicker = 1880:4:1916;
 yr = yearTicker(turn); % Starting year
@@ -69,7 +75,8 @@ navyBought = zeros(10,playerCount); % Building navies
 
 totalRevenue = zeros(10,playerCount);
 totalExpenditure = zeros(10,playerCount);
-income = zeros(10,playerCount);
+spendable = zeros(10,playerCount);
+remaining = zeros(10,playerCount);
 
 % Military
 armies = zeros(10,playerCount);

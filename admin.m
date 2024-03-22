@@ -50,7 +50,8 @@ for p = 1:length(playerPowers.pID)
     totalRevenue(turn,p) = statusRevenue(turn,p) + colonialOffice(turn,p);
     totalExpenditure(turn,p) = statusUpkeep(turn,p) + armyUpkeep(turn,p) + navyUpkeep(turn,p);
 
-    totalIncome(turn,p) = totalRevenue(turn,p) - totalExpenditure(turn,p);
+    spendable(turn,p) = totalRevenue(turn,p) - totalExpenditure(turn,p);
+    remaining(turn,p) = spendable(turn,p);
 
 
     %% Print Finances to Console
@@ -65,6 +66,6 @@ for p = 1:length(playerPowers.pID)
     fprintf("- %d£ Army Supplies\n",-1*armyUpkeep(turn,p));
     fprintf("- %d£ Naval Supplies\n",-1*navyUpkeep(turn,p));
 
-    fprintf("\nTOTAL INCOME: **%d£**\n\n",totalIncome(turn,p));
+    fprintf("\nTOTAL INCOME: **%d£**\n\n",spendable(turn,p));
 
 end
