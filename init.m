@@ -10,6 +10,7 @@ playerCount = sum(powers.player) - 1;
 minorCount = sum(powers.colonizer) - sum(powers.player);
 
 playerPowers = powers(powers.player == 1,:);
+minors = powers(powers.player == 0 & powers.colonizer == 1,:);
 
 %% Import Initial State
 
@@ -33,6 +34,9 @@ unrest = join(unrest,areas,"Keys","aID");
 
 % Colonial Office Funding Ranges
 funding = readtable("settings/defines/funding.csv","Delimiter",',','ReadVariableNames',true);
+
+% Minor Power Priorities
+minorTables = readtable("settings/defines/minorTables.csv","Delimiter",',','ReadVariableNames',true);
 
 %% Game Loop
 % Sets up initial game state
