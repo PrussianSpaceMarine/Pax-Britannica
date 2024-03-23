@@ -3,7 +3,7 @@
 
 close all
 
-global areas areaTypes area_markers
+global areas areaTypes area_markers units
 
 figure
 hold on
@@ -36,6 +36,7 @@ for a = 1:height(areas)
     
     for c = 1:height(m)
 
+        % Owner and color
         owner = m{c,"pID"};
         color = powers{powers{:,"pID"} == owner,"color"};
 
@@ -59,7 +60,27 @@ for a = 1:height(areas)
             symbol = "><";
         end
 
-        text(aX - 0.2 + 0.1 * c,aY + 0.15,symbol,"FontSize",6,"FontWeight","bold",'EdgeColor',[0 0 0],"BackgroundColor",hex2rgb(color),"LineStyle",bStyle,Clipping='on');
+        mil = "";
+        thisCountrys = units(units{:,"pID"} == owner & units{:,"aID"} == ar.aID,:);
+        for uu = 1:height(thisCountrys)
+            
+            p = thisCountrys(uu,:);
+
+            % Type
+            if p.uType == 1
+                type = "A";
+            elseif p.uType == 2
+                type = "N";
+            elseif p.uType == 3
+                type = "M";
+            end
+
+            s = p.sz;
+
+            mil = mil + " " + s + type;
+        end
+
+        text(aX - 0.2 + 0.1 * c,aY + 0.15,symbol + mil,"FontSize",6,"FontWeight","bold",'EdgeColor',[0 0 0],"BackgroundColor",hex2rgb(color),"LineStyle",bStyle,Clipping='on');
     end
 end
 

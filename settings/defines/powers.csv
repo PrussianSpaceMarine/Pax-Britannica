@@ -4,12 +4,12 @@ pID,n,nS,player,colonizer,fundLvl,vpDiv,fundM,minorActive,aID,color
 3,Germany,ger,1,1,3,5,1,6,114,#93826e
 4,United States,usa,1,1,3,4,1,6,106,#425ec1
 5,Japan,jap,1,1,2,3,1,4,105,#ffbfbf
-6,Russia,rus,0,1,2,2.5,1,5,107,#2f5b12
+6,Russia,rus,0,1,2,2.5,1,5,107,#407c18
 7,Italy,ita,0,1,2,2.5,1,4,116,#7dab54
 8,Austria-Hungary,a_h,1,1,2,5,1,4,115,#ececec
 9,Belgium,bel,0,1,1,1,1,3,109,#ebc87f
 10,Netherlands,ned,0,1,1,1,1,2,108,#dc8a39
 11,Spain,spa,0,1,1,1,1,1,110,#e7b50c
-12,Portugal,por,0,1,1,1,1,1,111,#39a065
-13,Ottomans,ott,0,0,1,1,1,1,6,#9f0035
-14,China,chi,0,0,1,1,1,1,23,#d23900
+12,Portugal,por,0,1,1,1,1,1,111,#ff1493
+13,Ottomans,ott,0,0,1,1,1,1,6,#c60042
+14,China,chi,0,0,1,1,1,1,23,#ffea9a

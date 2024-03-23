@@ -105,25 +105,25 @@ aID,name,tID,ev,cs,validDoSt,unrest,x,y,specialColor
 104,Yunnan,3,5,3,0,0,7.8,4.7,#FFFFFF
 105,Japan,6,0,0,0,0,9.5,7,#ffbfbf
 106,United States,6,0,0,0,0,6.9,11.5,#425ec1
-107,Russia,6,0,0,0,0,6.5,6.5,#2f5b12
+107,Russia,6,0,0,0,0,6.5,6.5,#407c18
 108,Netherlands,6,0,0,0,0,4.5,7.7,#dc8a39
-109,Belgium,6,0,0,0,0,4.2,7.5,#ebc87f
-110,Spain,6,0,0,0,0,3.1,7.7,#e7b50c
-111,Portugal,6,0,0,0,0,3.6,7.7,#39a065
+109,Belgium,6,0,0,0,0,4.2,7.7,#ebc87f
+110,Spain,6,0,0,0,0,3,7.8,#e7b50c
+111,Portugal,6,0,0,0,0,3.2,8,#ff1493
 112,Britain,6,0,0,0,0,4,8.2,#d1423a
-113,France,6,0,0,0,0,3.9,7.5,#1432d2
+113,France,6,0,0,0,0,3.8,7.5,#1432d2
 114,Germany,6,0,0,0,0,4.8,7.1,#93826e
 115,Austria-Hungary,6,0,0,0,0,4.3,7,#ececec
 116,Italy,6,0,0,0,0,4,6.8,#7dab54
-117,North Atlantic Ocean,7,0,0,0,0,0,0,#FFFFFF
-118,South Atlantic Ocean,7,0,0,0,0,0,0,#FFFFFF
-119,Caribbean Sea,7,0,0,0,0,0,0,#FFFFFF
-120,Mediterranean Sea,7,0,0,0,0,0,0,#FFFFFF
-121,Baltic Sea,7,0,0,0,0,0,0,#FFFFFF
-122,Black Sea,7,0,0,0,0,0,0,#FFFFFF
-123,Indian Ocean,7,0,0,0,0,0,0,#FFFFFF
-124,South Pacific Ocean,7,0,0,0,0,0,0,#FFFFFF
-125,North Pacific Ocean,7,0,0,0,0,0,0,#FFFFFF
-126,Oceania,7,0,0,0,0,0,0,#FFFFFF
-127,North China Sea,7,0,0,0,0,0,0,#FFFFFF
-128,South China Sea,7,0,0,0,0,0,0,#FFFFFF
+117,North Atlantic Ocean,7,0,0,0,0,1.8,8,#FFFFFF
+118,South Atlantic Ocean,7,0,0,0,0,1.4,5,#FFFFFF
+119,Caribbean Sea,7,0,0,0,0,5,12,#FFFFFF
+120,Mediterranean Sea,7,0,0,0,0,3.4,7.4,#FFFFFF
+121,Baltic Sea,7,0,0,0,0,4.8,8,#FFFFFF
+122,Black Sea,7,0,0,0,0,5.2,6.3,#FFFFFF
+123,Indian Ocean,7,0,0,0,0,5.3,3.5,#FFFFFF
+124,South Pacific Ocean,7,0,0,0,0,7,14,#FFFFFF
+125,North Pacific Ocean,7,0,0,0,0,8.5,10.5,#FFFFFF
+126,Oceania,7,0,0,0,0,11.5,2,#FFFFFF
+127,North China Sea,7,0,0,0,0,9.3,5.4,#FFFFFF
+128,South China Sea,7,0,0,0,0,8.3,3,#FFFFFF
