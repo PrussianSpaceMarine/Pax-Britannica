@@ -7,7 +7,7 @@ noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
 % 1 = Player, 0 = Minor
 
 % Globals
-global powers units area_markers areas areaTypes adj
+global powers units area_markers areas areaTypes adj coast
 
 powers = readtable("settings/defines/powers.csv");
 
@@ -24,6 +24,7 @@ minors = powers(powers.player == 0 & powers.colonizer == 1,:);
 areaTypes = readtable("settings/defines/areaTypes.csv");
 areas = readtable("settings/defines/areas.csv");
 adj = readtable("settings/defines/adjacency.csv");
+coast = readtable("settings/defines/coastal.csv");
 
 % Types of status marker
 markerTypes = readtable("settings/defines/markerTypes.csv");
