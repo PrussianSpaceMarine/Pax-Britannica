@@ -7,7 +7,7 @@ noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
 % 1 = Player, 0 = Minor
 
 % Globals
-global powers units area_markers areas areaTypes adj coast
+global powers units area_markers areas areaTypes adj coast markerTypes
 
 powers = readtable("settings/defines/powers.csv");
 

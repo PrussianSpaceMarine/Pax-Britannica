@@ -1,21 +1,16 @@
-function [resultU,resultM] = moveUnit(playerID,uID,destination)
+function [resultU,resultM] = moveUnit(uID,destination)
 % moveUnit - Moves an army, navy, or merchant fleet from one Area/Zone to another
 arguments
-    playerID (1,1) double
     uID (1,1) double
     destination
 end
 
 global powers units areas,
 
-% Power information
-p = powers(playerID,:);
-pp = p.pID;
-name = string(p.n);
-
-u = units(units{:,"pID"} == pp,:); % Pull controlled units
-
-thisUnit = u(u{:,"uID"} == uID,:); % Pull units with matching ID
+thisUnit = units(units{:,"uID"} == uID,:); % Pull units with matching ID
+pp = thisUnit.pID;
+p = powers(pp,:);
+name = string(powers{pp,"n"});
 
 if height(thisUnit) > 1
     fprintf("\nERR: Duplicate Units\n\n");
@@ -49,7 +44,5 @@ else
 
     % Move unit
 end
-
-% fprintf("\n%s constructs size %d navy.\n\n",name,sz);
 
 end
