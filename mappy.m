@@ -3,7 +3,7 @@
 
 close all
 
-global areas areaTypes area_markers units
+global areas areaTypes area_markers units adj
 
 figure
 hold on
@@ -11,6 +11,28 @@ hold on
 xlim([0 18])
 ylim([0 13])
 pbaspect([18 13 1])
+
+%% Lines and adjacency
+for a = 1:height(areas)
+    ar = areas(a,:);
+    aY = 13-ar.x;
+    aX = ar.y;
+    
+    % Pull adjacent Areas
+    aa = adj(adj{:,"aID"} == ar.aID,:);
+    for aaa = 1:height(aa)
+        aN = aa{aaa,"to"}; % Area being drawn
+
+        % Its coordinates
+        aNX = areas{aN,"y"};
+        aNY = 13 - areas{aN,"x"};
+        
+        % Draw a line
+        if aa.type == 1
+            plot([aX aNX], [aY aNY],'LineWidth',2,'Color',[0 0 0]);
+        end
+    end
+end
 
 for a = 1:height(areas)
     ar = areas(a,:);
@@ -31,7 +53,8 @@ for a = 1:height(areas)
         text(aX, aY, {string(ar.name),"£"+string(ar.ev)+"    "+string(ar.cs)},"FontSize",5.5,"FontWeight","bold",'EdgeColor',[0 0 0],'HorizontalAlignment','center',Clipping='on',BackgroundColor=boxColor)
     end
 
-    %% Status Markers
+
+    %% Status Markers and Units
     m = sortrows(area_markers(area_markers{:,"aID"} == a,:),["mID" "pID"],["descend" "ascend"]);
     
     for c = 1:height(m)

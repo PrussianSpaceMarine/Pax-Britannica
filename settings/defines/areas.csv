@@ -47,13 +47,13 @@ aID,name,tID,ev,cs,validDoSt,unrest,x,y,specialColor
 46,Kambara,1,3,1,0,0,2.4,6.2,#FFFFFF
 47,Kamerun,1,5,1,0,0,2.2,5.2,#FFFFFF
 48,Kansu,3,4,3,0,0,7.4,5.2,#FFFFFF
-49,Kashmir,1,3,3,0,0,6.1,5.4,#FFFFFF
+49,Kashmir,1,3,3,0,0,6.4,5.4,#FFFFFF
 50,Kenya,1,6,2,0,0,3.5,3.9,#FFFFFF
 51,Kongo,1,8,1,0,0,2.8,4.6,#FFFFFF
 52,Korea,2,8,3,0,0,9.1,6.4,#FFFFFF
 53,Kwang-Si,3,4,5,0,0,8.1,4.4,#FFFFFF
 54,Madagascar,1,5,1,0,0,3.1,2.7,#FFFFFF
-55,Manchuria,3,8,5,0,0,8.6,5.8,#FFFFFF
+55,Manchuria,3,8,5,0,0,8.6,6.2,#FFFFFF
 56,Marocco,1,5,3,0,0,3,7.1,#FFFFFF
 57,Mauretania,1,3,1,0,0,2,7,#FFFFFF
 58,Mexico,5,7,20,0,0,7,12.4,#FFFFFF
@@ -64,7 +64,7 @@ aID,name,tID,ev,cs,validDoSt,unrest,x,y,specialColor
 63,New Zealand,5,6,5,2,0,12,1,#FFFFFF
 64,Newfoundland,1,1,3,0,0,5.4,10.4,#FFFFFF
 65,Nigeria,1,6,3,0,0,2.2,5.6,#FFFFFF
-66,Orange River Free State,5,7,5,0,0,1.8,3.1,#FFFFFF
+66,Orange River Free State,5,7,5,0,0,1.8,2.8,#FFFFFF
 67,Panama,5,4,2,0,0,6,13.2,#FFFFFF
 68,Papua,1,3,1,0,0,10.6,2.7,#FFFFFF
 69,Persia,5,4,3,0,0,5.2,5.4,#FFFFFF
@@ -94,7 +94,7 @@ aID,name,tID,ev,cs,validDoSt,unrest,x,y,specialColor
 93,Taureg,1,3,1,0,0,2.9,6.5,#FFFFFF
 94,Tchad,1,2,1,0,0,3.1,5.2,#FFFFFF
 95,Tibet,3,2,3,0,0,7,5,#FFFFFF
-96,Togoland,1,4,1,0,0,1.8,5.7,#FFFFFF
+96,Togoland,1,4,1,0,0,1.8,5.6,#FFFFFF
 97,Transvaal,5,7,15,0,0,2.2,3.2,#FFFFFF
 98,Tripoli,4,4,2,0,0,3.8,6.1,#FFFFFF
 99,Tunis,1,5,3,0,0,3.6,6.5,#FFFFFF

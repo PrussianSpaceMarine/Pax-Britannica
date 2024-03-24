@@ -1,0 +1,190 @@
+aID,name,to,type
+1,Abyssinia,89,1
+1,Abyssinia,31,1
+1,Abyssinia,14,1
+1,Abyssinia,88,1
+1,Abyssinia,50,1
+3,Afghanistan,100,1
+3,Afghanistan,107,1
+3,Afghanistan,49,1
+3,Afghanistan,74,1
+3,Afghanistan,11,1
+3,Afghanistan,69,1
+4,Alaska,20,1
+5,Algiers,56,1
+5,Algiers,99,1
+5,Algiers,93,1
+6,Anatolia,18,1
+6,Anatolia,82,1
+6,Anatolia,38,1
+6,Anatolia,30,1
+6,Anatolia,75,1
+6,Anatolia,69,1
+6,Anatolia,107,1
+7,Angola,77,1
+7,Angola,90,1
+7,Angola,51,1
+8,Argentina,16,1
+8,Argentina,17,1
+8,Argentina,24,1
+9,Ashantee,81,1
+9,Ashantee,37,1
+9,Ashantee,46,1
+11,Baluchistan,69,1
+11,Baluchistan,74,1
+11,Baluchistan,76,1
+12,Bechuanaland,77,1
+12,Bechuanaland,97,1
+12,Bechuanaland,90,1
+12,Bechuanaland,21,1
+13,Bengal,95,1
+13,Bengal,19,1
+13,Bengal,85,1
+13,Bengal,41,1
+13,Bengal,102,1
+14,Berbera,31,1
+14,Berbera,88,1
+16,Bolivia,24,1
+16,Bolivia,17,1
+16,Bolivia,70,1
+17,Brasil,70,1
+17,Brasil,26,1
+17,Brasil,103,1
+17,Brasil,39,1
+18,Bulgaria,79,1
+18,Bulgaria,82,1
+19,Burma,85,1
+19,Burma,43,1
+19,Burma,104,1
+20,Canada,64,1
+20,Canada,106,1
+21,Cape Colony,90,1
+21,Cape Colony,66,1
+21,Cape Colony,97,1
+22,Central America,58,1
+22,Central America,67,1
+23,Central China,44,1
+23,Central China,48,1
+23,Central China,91,1
+23,Central China,35,1
+23,Central China,83,1
+23,Central China,84,1
+23,Central China,55,1
+24,Chile,70,1
+25,Cochinchina,43,1
+25,Cochinchina,85,1
+26,Colombia,29,1
+26,Colombia,70,1
+26,Colombia,67,1
+26,Colombia,103,1
+28,Dutch East Indies,80,1
+29,Ecuador,70,1
+30,Egypt,98,1
+30,Egypt,89,1
+31,Eritrea,89,1
+32,Federated Malay States,85,1
+35,Fukien,42,1
+35,Fukien,53,1
+35,Fukien,83,1
+36,Gabon,47,1
+36,Gabon,51,1
+37,Gold Coast,46,1
+37,Gold Coast,96,1
+38,Greece,115,1
+39,Guiana,103,1
+41,Hindoostan,102,1
+41,Hindoostan,76,1
+42,Hong Kong,53,1
+43,Indochina,85,1
+43,Indochina,104,1
+43,Indochina,53,1
+44,Inner Mongolia,48,1
+44,Inner Mongolia,55,1
+44,Inner Mongolia,59,1
+45,Kaiser Wilhelm's Land,68,1
+45,Kaiser Wilhelm's Land,61,1
+46,Kambara,57,1
+46,Kambara,81,1
+46,Kambara,96,1
+46,Kambara,87,1
+47,Kamerun,65,1
+47,Kamerun,51,1
+47,Kamerun,94,1
+48,Kansu,91,1
+48,Kansu,95,1
+48,Kansu,86,1
+48,Kansu,59,1
+49,Kashmir,74,1
+49,Kashmir,95,1
+49,Kashmir,86,1
+50,Kenya,88,1
+50,Kenya,89,1
+50,Kenya,101,1
+50,Kenya,92,1
+51,Kongo,89,1
+51,Kongo,94,1
+51,Kongo,92,1
+51,Kongo,101,1
+51,Kongo,77,1
+52,Korea,55,1
+52,Korea,107,1
+53,Kwang-Si,104,1
+53,Kwang-Si,91,1
+55,Manchuria,59,1
+55,Manchuria,107,1
+55,Manchuria,72,1
+56,Marocco,78,1
+56,Marocco,93,1
+57,Mauretania,78,1
+57,Mauretania,93,1
+57,Mauretania,81,1
+58,Mexico,106,1
+59,Mongolia,86,1
+59,Mongolia,107,1
+60,Mozambique,77,1
+60,Mozambique,92,1
+60,Mozambique,97,1
+61,New Guinea,68,1
+65,Nigeria,96,1
+65,Nigeria,87,1
+66,Orange River Free State,97,1
+69,Persia,100,1
+69,Persia,107,1
+74,Punjab,76,1
+74,Punjab,102,1
+76,Rajputana,102,1
+77,Rhodesia,92,1
+77,Rhodesia,90,1
+77,Rhodesia,97,1
+78,Rio de Oro,93,1
+79,Rumania,107,1
+79,Rumania,115,1
+79,Rumania,82,1
+82,Serbia,115,1
+86,Sin-Kiang,107,1
+86,Sin-Kiang,95,1
+87,Sokoto,96,1
+87,Sokoto,94,1
+87,Sokoto,98,1
+87,Sokoto,93,1
+89,Soudan,101,1
+89,Soudan,94,1
+91,Szech-Wan,104,1
+91,Szech-Wan,95,1
+92,Tanganyika,101,1
+93,Taureg,98,1
+94,Tchad,98,1
+98,Tripoli,99,1
+100,Turcomania,107,1
+117,North Atlantic Ocean,1,2
+118,South Atlantic Ocean,1,2
+119,Caribbean Sea,1,2
+120,Mediterranean Sea,1,2
+121,Baltic Sea,1,2
+122,Black Sea,1,2
+123,Indian Ocean,1,2
+124,South Pacific Ocean,1,2
+125,North Pacific Ocean,1,2
+126,Oceania,1,2
+127,North China Sea,1,2
+128,South China Sea,1,2
