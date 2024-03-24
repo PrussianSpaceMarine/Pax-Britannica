@@ -8,7 +8,7 @@ fprintf("# ADMINISTRATION #\n");
 for p = 1:length(playerPowers.pID)
 
     pp = playerPowers{p,"pID"};
-    empire = area_markers(area_markers{:,"pID"} == pp,:);
+    empire = area_markersJ(area_markersJ{:,"pID"} == pp & area_markersJ{:,"tID"} ~= 6,:);
     highest = max([empire.mID;0]);
 
     % Colonial Office Funding
@@ -27,7 +27,7 @@ for p = 1:length(playerPowers.pID)
     colonialOffice(turn,p) = coRange(r) * playerPowers{p,"fundM"};
     
     % Filter status markers to this country
-    f = area_markersJ(area_markersJ{:,"pID"} == pp,:);
+    f = area_markersJ(area_markersJ{:,"pID"} == pp & area_markersJ{:,"tID"} ~= 6,:);
     
     % Filter units to this country
     u = units(units{:,"pID"} == pp,:);

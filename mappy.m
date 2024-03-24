@@ -78,7 +78,7 @@ for a = 1:height(areas)
 
     %% Status Markers and Units
     m = sortrows(area_markers(area_markers{:,"aID"} == a,:),["mID" "pID"],["descend" "ascend"]);
-    
+
     for c = 1:height(m)
 
         % Owner and color
@@ -106,7 +106,7 @@ for a = 1:height(areas)
         end
 
         mil = "";
-        thisCountrys = units(units{:,"pID"} == owner & units{:,"aID"} == ar.aID,:);
+        thisCountrys = sortrows(units(units{:,"pID"} == owner & units{:,"aID"} == ar.aID,:),["uType" "sz"],["descend" "descend"]);
         for uu = 1:height(thisCountrys)
             
             p = thisCountrys(uu,:);
@@ -126,6 +126,40 @@ for a = 1:height(areas)
         end
 
         text(aX - 0.2 + 0.1 * c,aY + 0.15,symbol + mil,"FontSize",6,"FontWeight","bold",'EdgeColor',[0 0 0],"BackgroundColor",hex2rgb(color),"LineStyle",bStyle,Clipping='on');
+    end
+end
+
+%%  Things in Sea Zones
+sea = areas(areas{:,"tID"} == 7,:);
+for ss = 1:height(sea)
+
+    aY = 13-sea{ss,"x"};
+    aX = sea{ss,"y"};
+
+    % Units in sea zone
+    mf = units(units{:,"aID"} == sea{ss,"aID"},:);
+    for uu = 1:height(mf)
+        mil = "";
+
+        % Owner and color
+        owner = mf{uu,"pID"};
+        color = powers{powers{:,"pID"} == owner,"color"};
+
+
+        % Type
+        if mf{uu,"uType"} == 1
+            type = "A";
+            s = mf{uu,"sz"};
+        elseif mf{uu,"uType"} == 2
+            type = "N";
+            s = mf{uu,"sz"};
+        elseif mf{uu,"uType"} == 3
+            type = "M";
+            s = "";
+        end
+
+        mil = mil + " " + s + type;
+        text(aX - 0.2 + 0.1 * uu,aY + 0.15,mil,"FontSize",6,"FontWeight","bold",'EdgeColor',[0 0 0],"BackgroundColor",hex2rgb(color),"LineStyle",bStyle,Clipping='on');
     end
 end
 
