@@ -1,9 +1,10 @@
-function [resultU,resultM] = buyUnit(playerID,uType,sz)
+function [resultU,resultM] = buyUnit(playerID,uType,sz,pay)
 % BUYUNIT - Purchases an Army or Navy and places them in the metropole
 arguments
     playerID (1,1) double
     uType (1,1) double
     sz (1,1) double
+    pay (1,1) double = 1
 end
 
 global turn powers remaining units armyBought navyBought totalExpenditure,
@@ -18,7 +19,7 @@ elseif sz == 10
 end
 
 % Ensure the player has enough money
-if price > remaining(turn,playerID)
+if price > remaining(turn,playerID) && pay == 1
     fprintf("\nERR: Not enough money\n\n");
 else
     % Build unit
@@ -33,18 +34,22 @@ else
     add = {unitID pp metro uType sz}; % Compile info
     units = [units;add]; % Add to units table
 
-    % Track money
-    remaining(turn,playerID) = remaining(turn,playerID) - price;
-    totalExpenditure(turn,playerID) = totalExpenditure(turn,playerID) + price;
-    
-    % Track military construction and print msg to console
-    if uType == 1
-        armyBought(turn,playerID) = armyBought(turn,playerID) + price;
-        fprintf("\n%s recruits size %d army.\n\n",name,sz);
-    else
-        navyBought(turn,playerID) = navyBought(turn,playerID) + price;
-        fprintf("\n%s constructs size %d navy.\n\n",name,sz);
+    if pay == 1
+
+        % Track money
+        remaining(turn,playerID) = remaining(turn,playerID) - price;
+        totalExpenditure(turn,playerID) = totalExpenditure(turn,playerID) + price;
+        
+        % Track military construction and print msg to console
+        if uType == 1
+            armyBought(turn,playerID) = armyBought(turn,playerID) + price;
+            fprintf("\n%s recruits size %d army.\n\n",name,sz);
+        else
+            navyBought(turn,playerID) = navyBought(turn,playerID) + price;
+            fprintf("\n%s constructs size %d navy.\n\n",name,sz);
+        end
     end
+
 end
 
 end
