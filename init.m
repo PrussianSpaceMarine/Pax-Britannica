@@ -12,7 +12,7 @@ global powers units area_markers areas areaTypes adj coast markerTypes
 powers = readtable("settings/defines/powers.csv");
 
 % Count of players and minors
-playerCount = sum(powers.player) - 1;
+playerCount = sum(powers.player);
 minorCount = sum(powers.colonizer) - sum(powers.player);
 
 playerPowers = powers(powers.player == 1,:);
