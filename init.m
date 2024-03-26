@@ -1,6 +1,11 @@
 % Initializes game state
 clear
 
+% Define function folders so the functions may be easily called
+addpath(genpath("settings/functions/adjust"));
+addpath(genpath("settings/functions/utility"));
+addpath(genpath("settings/functions/turn"));
+
 noStop = 0; % 0 == Don't automatically run first turn information, 1 == Run
 
 %% Assign Country Data
