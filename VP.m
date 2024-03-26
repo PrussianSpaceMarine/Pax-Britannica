@@ -63,6 +63,6 @@ for bb = 1:height(playerPowers)
 end
 grid on;
 legend([playerPowers{:,"n"}]);
-xlabel("Powers")
+xlabel("Year")
 ylabel("Victory Points")
 hold off;

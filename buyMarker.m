@@ -23,7 +23,7 @@ currentInvest = max([0 markerTypes{markerTypes{:,"mID"} == thisMax,"buy"}]);
 price = price - currentInvest;
 
 % Ensure the player has enough money
-if price > remaining(turn,playerID)
+if pay == 1 && price > remaining(turn,playerID)
     fprintf("\nERR: Not enough money\n\n");
 else
     % Build unit
@@ -37,13 +37,16 @@ else
     % Add to list
     area_markers = [area_markers;add];
 
-    % Track money
-    remaining(turn,playerID) = remaining(turn,playerID) - price;
-    totalExpenditure(turn,playerID) = totalExpenditure(turn,playerID) + price;
-
-    % Track purchase cost and print msg to console
-    statusBought(turn,playerID) = statusBought(turn,playerID) + price;
-    fprintf("\n%s pursues %s in %s\n",name,string(markerTypes{mID,2}),string(areas{areas{:,"aID"} == aID,"name"}));
+    if pay == 1
+        % Track money
+        remaining(turn,playerID) = remaining(turn,playerID) - price;
+        totalExpenditure(turn,playerID) = totalExpenditure(turn,playerID) + price;
+    
+        % Track purchase cost and print msg to console
+        statusBought(turn,playerID) = statusBought(turn,playerID) + price;
+        fprintf("\n%s pursues %s in %s\n",name,string(markerTypes{mID,2}),string(areas{areas{:,"aID"} == aID,"name"}));
+    end
+    
 end
 
 end
