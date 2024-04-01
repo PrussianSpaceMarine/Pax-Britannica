@@ -58,7 +58,7 @@ minorTables = readtable("settings/defines/minorTables.csv","Delimiter",',','Read
 % Sets up initial game state
 
 % Globals
-global turn spendable armyBought navyBought totalExpenditure remaining vpBonus vpPenalty vpBought yearTicker
+global turn spendable armyBought navyBought totalExpenditure remaining vpBonus vpPenalty vpBought yearTicker resentment tensions
 
 turn = 1;
 yearTicker = 1880:4:1916;

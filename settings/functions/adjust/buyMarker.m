@@ -1,5 +1,7 @@
-function [resultU,resultM] = buyMarker(playerID,mID,aID,pay)
-% BUYUNIT - Purchases an Army or Navy and places them in the metropole
+function result = buyMarker(playerID,mID,aID,pay)
+% BUYMARKER - Purchases a status marker and places it in the designated
+% area.  Auto-establishes if < Prot and no unrest.
+
 arguments
     playerID (1,1) double
     mID (1,1) double
@@ -7,7 +9,7 @@ arguments
     pay (1,1) double = 1
 end
 
-global turn powers remaining totalExpenditure markerTypes area_markers statusBought areas
+global turn powers remaining totalExpenditure markerTypes area_markers statusBought areas resentment turn
 
 % Listed price
 price = markerTypes{markerTypes{:,"mID"} == mID,"buy"};
@@ -17,7 +19,9 @@ existing = area_markers(area_markers{:,"aID"} == aID,:);
 thisCountrys = existing(existing{:,"pID"} == playerID,:);
 thisMax = max([0 thisCountrys.mID]);
 
-currentInvest = max([0 markerTypes{markerTypes{:,"mID"} == thisMax,"buy"}]);
+% Current maximum status present
+maxType = markerTypes(markerTypes{:,"mID"} == thisMax,:);
+currentInvest = max([0 maxType.buy]);
 
 % Adjusted price
 price = price - currentInvest;
@@ -26,13 +30,35 @@ price = price - currentInvest;
 if pay == 1 && price > remaining(turn,playerID)
     fprintf("\nERR: Not enough money\n\n");
 else
-    % Build unit
+    % Buy marker
 
     p = powers(playerID,:);
     pp = p.pID;
     name = string(p.n);
 
-    add = {aID mID pp 0}; % Compile info
+    % Compile info
+    if mID < 3 && areas{aID,"unrest"} < 1
+        add = {aID mID pp 1}; % If < Prot and no unrest, auto-establish
+    else
+        add = {aID mID pp 0}; % Otherwise, leave unestablished
+    end
+
+    % Is the area part of China or a Chinese Vassal?  If so, increase
+    % resentment
+    tID = areas{areas{:,"aID"} == aID,"tID"};
+    if tID == 2 % Chinese Vassal
+
+        takenResent = max([0 maxType.cvResentPlace]); % Already taken resentment
+        resentIncrease = markerTypes{mID,"cvResentPlace"} - takenResent; % Amount to increase
+        resentment(turn) = resentment(turn) + resentIncrease; % Write to file
+
+    elseif tID == 3 % Chinese Empire proper
+
+        takenResent = max([0 maxType.cResentPlace]); % Already taken resentment
+        resentIncrease = markerTypes{mID,"cResentPlace"} - takenResent; % Amount to increase
+        resentment(turn) = resentment(turn) + resentIncrease; % Write to file
+        
+    end
 
     % Add to list
     area_markers = [area_markers;add];

@@ -1,6 +1,6 @@
-mID,marker,buy,maint,evM,garReq
-1,Interest,5,0,1,0
-2,Influence,10,5,2,0
-3,Protectorate,20,10,4,1
-4,Possession,40,20,5,1
-5,Dominion/State,60,30,5,1
+mID,marker,buy,maint,evM,garReq,cResentPlace,cvResentPlace,cResentMaint
+1,Interest,5,0,1,0,2,0,0
+2,Influence,10,5,2,0,4,0,0
+3,Protectorate,20,10,4,1,10,3,3
+4,Possession,40,20,5,1,15,6,5
+5,Dominion/State,60,30,5,1,15,6,5
