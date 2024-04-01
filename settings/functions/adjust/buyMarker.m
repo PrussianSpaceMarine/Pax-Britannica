@@ -60,8 +60,12 @@ else
         
     end
 
-    % Add to list
-    area_markers = [area_markers;add];
+    % Add to list or update existing
+    if thisMax > 0
+        area_markers(area_markers{:,"aID"} == aID & area_markers{:,"pID"} == playerID,:) = add;
+    else
+        area_markers = [area_markers;add];
+    end
 
     if pay == 1
         % Track money

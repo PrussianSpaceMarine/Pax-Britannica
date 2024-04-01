@@ -38,7 +38,7 @@ while m <= minorCount
             % Possession
 
             did = 4; reroll = 0;
-            area_markers{area_markers{:,"aID"} == colAttempt,"mID"} = did;
+            area_markers{area_markers{:,"aID"} == colAttempt & area_markers{:,"pID"} == mm,"mID"} = did;
 
         elseif highestStatus < 3 && (a.tID < 3 || a.unrest > 0)
             % Protectorate
